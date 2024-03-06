@@ -2,32 +2,56 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+.categoryTitle:hover .categoryBorder {
+  border: none;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+::-webkit-scrollbar {
+  width: 7px;
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+::-webkit-scrollbar-thumb {
+  background: #c1c1c1;
+  max-height: 50px;
+  min-height: 50px;
+}
+
+.iconDiv .copyContainer:hover .copy {
+  display: block;
+}
+
+.iconDiv .bookmarkContainer:hover .Bookmark {
+  display: block;
+}
+.iconDiv .memorizeContainer:hover .memorize {
+  display: block;
+}
+.iconDiv .shareContainer:hover .share {
+  display: block;
+}
+.iconDiv .reportContainer:hover .report {
+  display: block;
+}
+
+.copy::before,
+.Bookmark::before,
+.memorize::before,
+.share::before,
+.report::before {
+  position: absolute;
+  content: "";
+  height: 8px;
+  width: 8px;
+  background-color: #3d454e;
+  bottom: -5px;
+  left: 50%;
+  transform: translateX(-50%) rotate(45deg);
+}
+
+.active-link {
+  background-color: red;
 }
