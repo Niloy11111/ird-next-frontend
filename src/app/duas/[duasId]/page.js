@@ -6,12 +6,6 @@ import Image from "next/image";
 const DynamicDua = async ({ params, searchParams }) => {
   const data = await getDuasByCat();
 
-  console.log(params);
-
-  // const knowParams = useSearchParams();
-  // const subcat = knowParams.get("subcat");
-
-  console.log(searchParams);
   const subData = await getSubCategories();
 
   const filteredData = data.filter(
@@ -36,12 +30,12 @@ const DynamicDua = async ({ params, searchParams }) => {
       item.subcat_id === parseFloat(searchParams.subcat)
   );
 
-  console.log(makeData());
+  // console.log(makeData());
 
   const relevantSubData = subData.filter(
     (item) => item.cat_id === parseFloat(searchParams.cat)
   );
-  console.log(`subcat=${searchParams.subcat}`);
+  // console.log(`subcat=${searchParams.subcat}`);
   const organizedData = {};
   filteredData.forEach((item) => {
     if (!organizedData[item.subcat_id]) {
