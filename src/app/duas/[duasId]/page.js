@@ -133,6 +133,7 @@ const DynamicDua = async ({ params, searchParams }) => {
                           dua_arabic={item.dua_arabic}
                           transliteration_en={item.transliteration_en}
                           translation_en={item.translation_en}
+                          audio={`${item.audio}`}
                         ></IconList>
                       </div>
                     ))}

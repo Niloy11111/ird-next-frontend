@@ -6,9 +6,18 @@
   border: none;
 }
 
+.largeCategory::-webkit-scrollbar {
+  width: 7px;
+}
+.smallCategoryScroll::-webkit-scrollbar {
+  width: 0px;
+}
 ::-webkit-scrollbar {
   width: 7px;
 }
+/* ::-webkit-scrollbar-thumb:horizontal {
+  display: none;
+} */
 
 ::-webkit-scrollbar-track {
   background: #f1f1f1;
@@ -52,6 +61,41 @@
   transform: translateX(-50%) rotate(45deg);
 }
 
-.active-link {
-  background-color: red;
+/* ProgressBar.css */
+
+.progress-bar {
+  position: relative;
+  width: 100%;
+  height: 10px; /* Adjust height as needed */
+  background-color: #ccc; /* Set progress bar background color */
+  border-radius: 5px; /* Round the corners */
+}
+
+.progress {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  background-color: #007bff; /* Set progress bar color */
+  border-radius: 5px; /* Round the corners */
+}
+
+.circle {
+  position: absolute;
+  top: -5px; /* Adjust position to center the circle vertically */
+  left: 0;
+  width: 20px; /* Adjust circle size as needed */
+  height: 20px; /* Adjust circle size as needed */
+  background-color: #007bff; /* Set circle color */
+  border-radius: 50%;
+  animation: moveCircle linear infinite;
+}
+
+@keyframes moveCircle {
+  from {
+    transform: translateX(-50%);
+  }
+  to {
+    transform: translateX(100%);
+  }
 }

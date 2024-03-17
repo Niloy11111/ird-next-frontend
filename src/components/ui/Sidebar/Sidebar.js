@@ -12,21 +12,21 @@ const Sidebar = () => {
   ];
 
   return (
-    <div className="bg-[#ffffff] px-6 pt-8 pb-24 max-w-max rounded-3xl">
+    <div className="bg-[#ffffff] px-6 pt-8 pb-36 max-w-max rounded-3xl">
       <div>
         <Image
           src={`https://duaruqyah.com/assets/dua-logo.svg`}
-          width={50}
-          height={50}
+          width={51.5}
+          height={51.5}
           alt="dua"
         ></Image>
       </div>
 
-      <div>
+      <div className="my-24">
         {url.map((item) => (
           <div
             key={item.id}
-            className="my-9 bg-[#E8F0F5] flex justify-center items-center max-w-max mx-auto p-3 rounded-full cursor-pointer hover:scale-105"
+            className="my-6 bg-[#E8F0F5] flex justify-center items-center max-w-max mx-auto p-2 rounded-full cursor-pointer hover:scale-105"
           >
             {" "}
             <Image src={item.img} width={20} height={20} alt="dua"></Image>{" "}
@@ -34,7 +34,7 @@ const Sidebar = () => {
         ))}
       </div>
 
-      <div className="mt-20">
+      <div className="">
         <Image
           src={`https://duaruqyah.com/assets/dua-logo.svg`}
           width={50}
