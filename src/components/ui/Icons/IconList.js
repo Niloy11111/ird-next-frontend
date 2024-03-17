@@ -122,7 +122,7 @@ const IconList = ({
   return (
     <div className="flex items-center justify-between mt-10">
       {audio === "null" ? (
-        ""
+        <div></div>
       ) : (
         <div onClick={toggleAudio} className="">
           {audioPlaying ? (
@@ -162,7 +162,7 @@ const IconList = ({
         </div>
       )}
 
-      <div className="relative flex items-center gap-10 iconDiv ">
+      <div className="relative  flex  items-center gap-10 iconDiv ">
         <div onClick={handleCopied}>
           <CopyToClipboard
             text={`${title}\n\n${topEn}\n\n${dua_arabic}\n\n${transliteration_en}\n\n${translation_en}\n\n${refference}`}
